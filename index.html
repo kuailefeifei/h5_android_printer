@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>连接蓝牙打印机</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/qrcode.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/printer.js"></script>
+		<script src="js/searchDevices.js"></script>
+		<script src="js/utils.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />   
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav bgc_main head">
+			<h1 class="mui-title c_white">首页</h1>
+		</header>
+       
+		<div class="mui-content" style="padding:5%;">
+        <br>
+         <br>
+        <div><input id="info" type="text" width="200"></div>
+	    <div><input type="button" onclick="makeCode()" value="生成"></div>
+			<div id="paper" style="min-height: 300px;margin-top: 40px;border:solid 1px #C0C0C0;text-align: left;">
+				<div style="clear:both; width:280px; height:300px; margin:0 auto;">
+					        <div>**************条码补打**************</div>
+						   	<div>位置: <span id="position"></span></div>
+                            <div>颜色：<span id="color"></span></div>
+							<div>日期：<span id="date"></span></div>
+                            <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+                            <div>**************结束**************</div>
+			
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<span class="printer-title">
+					打印设备名称： 
+				</span>
+				<input id="device_name" type="text" width="200"><br/>
+			</div>
+			
+			<div>
+				<span class="printer-title">
+					可用的打印设备
+				</span>
+				<ul id="selectedDevice" class="printer-list mui-list-unstyled">
+
+				</ul>
+				<button id="searchButton" onclick="searchDevices()" class="mui-btn-blue">搜索打印设备</button>
+			</div>
+		</div>
+		<input id="printNumber" type="number" min=1 max=10 step=1 value=1>
+		<button id="printButton" onclick="printInterface()" class="mui-btn-blue">打印条码</button>
+
+	</body>
+
+</html>
