@@ -14,3 +14,4 @@
 - [h5开发 连接蓝牙打印机 打印标签](https://www.cnblogs.com/pingfanren/p/11532854.html)
 - [github BluetoothPrinter](https://github.com/qihang666/BluetoothPrinter)
 - [csdn | h5 连接蓝牙打印机，打印条码，二维码](https://blog.csdn.net/u011298872/article/details/112695272)
+- [Programmer Sought](https://www.programmersought.com/article/22959803619/)
